@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+      <ion-title>Cadastrar Vacina</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+          <ion-label floating>Nome:</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="vacina.nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Categoria:</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="vacina.categoria"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Custo Individual:</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="vacina.custo"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Data de Aplicação:</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="vacina.data"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <button type="button" (click)="addVacina()" ion-button full>Salvar</button>
+      </ion-item>
+  </ion-list>
+</ion-content>

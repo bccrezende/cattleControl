@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Detalhes
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+              <span ion-text color="primary" showWhen="ios">Cancel</span>
+              <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list *ngFor="let animal of animal">
+        <ion-list-header>
+            Dados da vaca - {{animal.number}}
+        </ion-list-header>
+        <ion-item>
+            <h3>Número do brinco: {{animal.number}}</h3>
+            <p>Data da compra/nascimento: {{animal.date}}</p>
+            <p>Origem: {{animal.date}}</p>
+        </ion-item>
+    </ion-list>
+    <ion-list *ngFor="let animal of animal">
+        <ion-list-header>
+            Vacinas - {{animal.number}}
+        </ion-list-header>
+        <ion-item>
+            <h3>Número do brinco: {{animal.number}}</h3>
+            <p>Data da compra/nascimento: {{animal.date}}</p>
+            <p>Origem: {{animal.date}}</p>
+        </ion-item>
+    </ion-list>
+    <ion-list *ngFor="let animal of animal">
+        <ion-list-header>
+            Inseminações - {{animal.number}}
+        </ion-list-header>
+        <ion-item>
+            <h3>Número do brinco: {{animal.number}}</h3>
+            <p>Data da compra/nascimento: {{animal.date}}</p>
+            <p>Origem: {{animal.date}}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>

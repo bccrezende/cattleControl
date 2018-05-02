@@ -1,0 +1,27 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+$app-direction: ltr;
+@import "ionic.globals";
+$toolbar-ios-background: #0E844E;
+$toolbar-md-background: #0E844E;
+$toolbar-wp-background: #0E844E;
+$toolbar-wp-title-text-color: white;
+$toolbar-ios-title-font-size: 1.6rem;
+$toolbar-md-title-font-size: 1.4rem;
+$toolbar-wp-title-font-size: 1.6rem;
+$toolbar-wp-title-padding-top: 450px;
+$toolbar-wp-title-padding-end: 450px;
+$toolbar-ios-button-border-radius: 8px;
+$colors: ( primary: #0E844E, secondary: #69D970, danger: #f53d3d, light: #f4f4f4, dark: #2C2F2D);
+@import "ionic.theme.default";
+@import "ionic.ionicons";
+
+/* @import "roboto";
+@import "noto-sans"; */
+
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+$font-family-base: "Oxygen",
+sans-serif !default;

@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Cadastro Boi</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Número:</ion-label>
+            <ion-input type="number" value="" [(ngModel)]="animal.numero"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Registro:</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="animal.registro"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Origem:</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="animal.origem"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Raça:</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="animal.raca"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Data da aquisição/nascimento:</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="animal.data"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <button type="button" (click)="addAnimal()" ion-button full>Salvar</button>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>Vacinas</ion-title>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-list-header>
+          Vacinas
+          <ion-note item-end>
+              <button ion-fab mini [navPush]="vacinaPage">
+                  <ion-icon name="add">
+                  </ion-icon>
+              </button>
+          </ion-note>
+      </ion-list-header>
+      <a ion-item *ngFor="let vacina of vacinas" (click)="openModal('vacina', vacina.$key)">
+          <h3>{{vacina.nome}}</h3>
+      </a>
+  </ion-list>
+</ion-content>

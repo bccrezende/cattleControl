@@ -1,0 +1,47 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Cadastro Bezerro</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Número:</ion-label>
+            <ion-input type="number" value="" [(ngModel)]="animal.numero"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Sexo:</ion-label>
+            <ion-select [(ngModel)]="animal.sexo">
+                <ion-option value="f">Femea</ion-option>
+                <ion-option value="m">Macho</ion-option>
+            </ion-select>
+            <!-- <ion-input type="text" value="" [(ngModel)]="model.registro"></ion-input> -->
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Data da aquisição/nascimento:</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="animal.data"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Mãe:</ion-label>
+            <ion-select [(ngModel)]="animal.vaca">
+                <ion-option *ngFor="let vaca of vacas" [value]="vaca.numero">{{vaca.numero}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Pai:</ion-label>
+            <ion-select [(ngModel)]="animal.boi">
+                <ion-option *ngFor="let boi of bois" [value]="boi.numero">{{boi.numero}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Inseminação:</ion-label>
+            <ion-input type="text" value="" [(ngModel)]="animal.raca"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <button type="button" (click)="addAnimal()" ion-button full>Salvar</button>
+        </ion-item>
+    </ion-list>
+</ion-content>

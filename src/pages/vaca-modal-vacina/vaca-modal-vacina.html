@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastrar Vacina Aplicada</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Vacina:</ion-label>
+      <ion-select [(ngModel)]="vacina_aplicada.vacina">
+        <ion-option *ngFor="let vacina of vacinas" [value]="vacina.nome">{{vacina.nome}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Data de Aplicação:</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="vacina_aplicada.data"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <button type="button" (click)="addVacinaAplicada()" ion-button full>Salvar</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
