@@ -74,7 +74,7 @@ export class BoiModalDetailsPage {
     this.viewCtrl.dismiss();
   }
 
-  deleteMessage(key){
+  deleteAnimal(key){
     this.deleteDocument("boi", key).then(()=>{
       this.navCtrl.push(AnimalPage);
     });

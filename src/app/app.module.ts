@@ -1,3 +1,5 @@
+import { InseminacaoModalDetailsPage } from './../pages/inseminacao-modal-details/inseminacao-modal-details';
+import { InseminacaoAddPage } from './../pages/inseminacao-add/inseminacao-add';
 import { VacinaAddPage } from './../pages/vacina-add/vacina-add';
 import { AnimalPageModule } from './../pages/animal/animal.module';
 import { BoiModalDetailsPage } from './../pages/boi-modal-details/boi-modal-details';
@@ -29,6 +31,7 @@ import { BezerroModalDetailsPage } from '../pages/bezerro-modal-details/bezerro-
 import { VacinaPage } from '../pages/vacina/vacina';
 import { VacinaModalDetailsPage } from '../pages/vacina-modal-details/vacina-modal-details';
 import { VacaModalVacinaPage } from '../pages/vaca-modal-vacina/vaca-modal-vacina';
+import { InseminacaoPage } from '../pages/inseminacao/inseminacao';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCihfocPsNkBbDgLJWZIiW8MOmscKpeSJk",
@@ -56,6 +59,9 @@ export const firebaseConfig = {
     VacinaAddPage,
     VacinaModalDetailsPage,
     VacaModalVacinaPage,
+    InseminacaoPage,
+    InseminacaoAddPage,
+    InseminacaoModalDetailsPage
   ],
   imports: [
     AnimalPageModule,
@@ -83,6 +89,9 @@ export const firebaseConfig = {
     VacinaAddPage,
     VacinaModalDetailsPage,
     VacaModalVacinaPage,
+    InseminacaoPage,
+    InseminacaoAddPage,
+    InseminacaoModalDetailsPage
   ],
   providers: [
     StatusBar,

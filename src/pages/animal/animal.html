@@ -19,7 +19,7 @@
             </ion-note>
         </ion-list-header>
         <a ion-item *ngFor="let boi of bois" (click)="openModal('boi', boi.$key)">
-            <h3>{{boi.numero}}</h3>
+            <h2>{{boi.numero}}</h2>
             <p>Raça: {{boi.raca}}</p>
             <p>Data da compra/nascimento: {{boi.data}}</p>
         </a>
@@ -32,7 +32,7 @@
             </ion-note>
         </ion-list-header>
         <a ion-item *ngFor="let vaca of vacas" (click)="openModal('vaca', vaca.$key)">
-            <h3>{{vaca.numero}}</h3>
+            <h2>{{vaca.numero}}</h2>
             <p>Origem: {{vaca.origem}}</p>
             <p>Data da compra/nascimento: {{vaca.data}}</p>
         </a>
@@ -46,7 +46,7 @@
 
         </ion-list-header>
         <a ion-item *ngFor="let bezerro of bezerros" (click)="openModal('bezerro', bezerro.$key)">
-            <h3>{{bezerro.numero}}</h3>
+            <h2>{{bezerro.numero}}</h2>
             <p>Origem: {{bezerro.origem}}</p>
             <p>Data da compra/nascimento: {{bezerro.data}}</p>
         </a>

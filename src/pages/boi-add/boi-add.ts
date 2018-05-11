@@ -36,11 +36,11 @@ export class BoiAddPage {
 
   addAnimal(){
     if (this.animal.numero){
-      this.updateDocument("bezerro", this.animal);
+      this.updateDocument("boi", this.animal);
       this.navCtrl.push(AnimalPage);
     }
     else{
-      this.addDocument("bezerro", this.animal);
+      this.addDocument("boi", this.animal);
       this.navCtrl.push(AnimalPage);
     }
     

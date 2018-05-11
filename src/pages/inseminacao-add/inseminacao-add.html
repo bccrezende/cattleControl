@@ -1,18 +1,30 @@
-<!--
-  Generated template for the InseminacaoAddPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>inseminacao-add</ion-title>
+      <ion-title>Adicionar Inseminação</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list>
+      <ion-item>
+          <ion-label floating>Data:</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="inseminacao.data"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Mãe:</ion-label>
+          <ion-select [(ngModel)]="inseminacao.vaca">
+              <ion-option *ngFor="let vaca of vacas" [value]="vaca.numero">{{vaca.numero}}</ion-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Pai:</ion-label>
+          <ion-select [(ngModel)]="inseminacao.boi">
+              <ion-option *ngFor="let boi of bois" [value]="boi.numero">{{boi.numero}}</ion-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+          <button type="button" (click)="addInseminacao()" ion-button full>Salvar</button>
+      </ion-item>
+  </ion-list>
 </ion-content>

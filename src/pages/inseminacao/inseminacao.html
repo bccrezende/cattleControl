@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+      <ion-title>Inseminações</ion-title>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-list-header>
+          Inseminacoes
+          <ion-note item-end>
+              <button ion-fab mini [navPush]="inseminacaoPage">
+                  <ion-icon name="add">
+                  </ion-icon>
+              </button>
+          </ion-note>
+      </ion-list-header>
+      <a ion-item *ngFor="let inseminacao of inseminacoes" (click)="openModal('inseminacao', inseminacao.$key)">
+          <h2>Data: {{inseminacao.data}}</h2>
+          <p>Boi: {{inseminacao.boi}}</p>
+          <p>Vaca: {{inseminacao.vaca}}</p>
+      </a>
+  </ion-list>
+</ion-content>

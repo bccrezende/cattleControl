@@ -10,6 +10,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { AuthService } from '../providers/auth/auth-service';
 import { SigninPage } from '../pages/signin/signin';
+import { InseminacaoPage } from '../pages/inseminacao/inseminacao';
 
 @Component({
   templateUrl: 'app.html'
@@ -52,8 +53,9 @@ export class MyApp {
 
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Vacinas', component: VacinaPage }, 
       { title: 'Animais', component: AnimalPage }, 
+      { title: 'Vacinas', component: VacinaPage }, 
+      { title: 'Inseminacoes', component: InseminacaoPage }, 
     ];
 
   }
