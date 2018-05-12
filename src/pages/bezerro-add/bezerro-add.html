@@ -36,8 +36,10 @@
             </ion-select>
         </ion-item>
         <ion-item>
-            <ion-label floating>Inseminação:</ion-label>
-            <ion-input type="text" value="" [(ngModel)]="animal.raca"></ion-input>
+            <ion-label floating>Inseminacoes:</ion-label>
+            <ion-select [(ngModel)]="animal.inseminacao">
+                <ion-option *ngFor="let inseminacao of inseminacoes" [value]="inseminacao.data">{{inseminacao.data}}</ion-option>
+            </ion-select>
         </ion-item>
 
         <ion-item>

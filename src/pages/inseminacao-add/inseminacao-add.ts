@@ -1,7 +1,7 @@
+import { InseminacaoPage } from './../inseminacao/inseminacao';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import * as firebase from 'firebase';
-import { AnimalPage } from '../animal/animal';
 
 @IonicPage()
 @Component({
@@ -14,13 +14,13 @@ export class InseminacaoAddPage {
   vacas: any;
   bois: any;
 
-  inseminacao = { id: '', data: '', vaca: '', boi: '',};
+  inseminacao = {data: '', vaca: '', boi: '',};
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.db = firebase.firestore();
     this.loadData();
 
-    this.inseminacao.id = this.navParams.get('id');
+
     this.inseminacao.data = this.navParams.get('data');
     this.inseminacao.vaca = this.navParams.get('vaca');
     this.inseminacao.boi = this.navParams.get('boi');
@@ -36,14 +36,10 @@ export class InseminacaoAddPage {
   }
 
   addInseminacao(){
-    if (this.inseminacao.id){
-      this.updateDocument("inseminacao", this.inseminacao);
-      this.navCtrl.push(AnimalPage);
-    }
-    else{
+      console.log(this.inseminacao);  
       this.addDocument("inseminacao", this.inseminacao);
-      this.navCtrl.push(AnimalPage);
-    }
+      this.navCtrl.push(InseminacaoPage);
+    
     
   }
 

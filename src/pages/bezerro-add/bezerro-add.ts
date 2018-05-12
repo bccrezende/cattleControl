@@ -20,8 +20,9 @@ export class BezerroAddPage {
   private db: any;
   vacas: any;
   bois: any;
+  inseminacoes: any;
 
-  animal = { id: '', numero: '', sexo: '', data: '', vaca: '', boi: '', raca: ''};
+  animal = { id: '', numero: '', sexo: '', data: '', vaca: '', boi: '', raca: '', inseminacao: ''};
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.db = firebase.firestore();
@@ -34,7 +35,7 @@ export class BezerroAddPage {
     this.animal.vaca = this.navParams.get('vaca');
     this.animal.boi = this.navParams.get('boi');
     this.animal.raca = this.navParams.get('raca');
-
+    this.animal.inseminacao = this.navParams.get('inseminacao');
   }
 
   loadData(){
@@ -44,6 +45,10 @@ export class BezerroAddPage {
     this.getAllDocuments("vaca").then((e)=>{
         this.vacas = e;
     });
+    this.getAllDocuments("inseminacao").then((e)=>{
+        this.inseminacoes = e;
+    });
+
   }
 
   addAnimal(){
